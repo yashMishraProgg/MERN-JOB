@@ -21,7 +21,7 @@ app.use(cookieParser());
 // ------------ CORS ------------
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:6000"],
+    origin: ["https://mernjob-portal-yash.onrender.com"], // replaced localhost URLs
     credentials: true,
   })
 );
@@ -53,7 +53,7 @@ connectDB()
 
     // IMPORTANT FIX → listen on ALL interfaces
     app.listen(PORT, "0.0.0.0", () =>
-      console.log(`Server running on port ${PORT}`)
+      console.log(`Server running at https://mernjob-portal-yash.onrender.com`)
     );
   })
   .catch((err) => {
